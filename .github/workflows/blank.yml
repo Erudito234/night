@@ -1,0 +1,18 @@
+from curses import BUTTON_ALT, BUTTON_CTRLfrom msilib.schema import SelfRegfrom multiprocessing import processimport netrcimport tkinter as tkfrom typing import Container, Self
+class View():    def _init_(self):        self.root = tk.TK()
+        self.desenha(self.root)
+        self.root.bind('Escape', self.close)
+
+        Self.radioValue = tk.StringVar()
+    Self.radioUm = tk.Radiobutton (Container, text='Idade', width=20, variable=Self.radioValue, value='Idade')
+    Self.radioUm.pack()
+    Self.radioDois = tk.Radiobutton (Container, text='Zona', width=20, variable=Self.radioValue, value='Zona')
+    Self.radioDois.pack()
+    tk.StringVar.Self.radioDoisadd_command(label='Norte')    tk.StringVar.Self.radioDoisadd_command(label='Sul')    tk.StringVar.Self.radioDoisadd_command(label='Leste')    tk.StringVar.Self.radioDoisadd_command(label='Oeste')
+    fileMenu = tk.Menu(tk.Entry, tearoff=0)
+    Self.entryTitulo = tk.Entry(Self.root, width=20)    Self.entryTitulo.pack()    container1 = tk.Entry.containers.run(Self.root)
+    tk.Entry.add_command(label='Nome')    tk.Entry.add_separator()    tk.Entry.add_cascade(label='CPF', menu=tk.Entry)    Self.Button = tk.Button(Self.root,width=20,text= 'Btn')    relatorio = Self.buttonrelatorio("command")    tk.Entry.add_separator()    tk.Entry.add_command(label='Data de nascimento')
+    def relatorio(self):        print('Imprimir relatorio')
+    def set_lbl(Self):        n, i, b = Self.relatorio()        string_01 = process(n, i, b)        Self.label['text'] = string_01
+v = View()
+v.run()
